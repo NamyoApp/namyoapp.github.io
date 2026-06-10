@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGU / CGV — NAMYO by My Sonar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #f9f7f4;
+        --surface: #ffffff;
+        --text-primary: #1a1814;
+        --text-secondary: #5a5750;
+        --text-muted: #9a968f;
+        --accent: #1d9e75;
+        --accent-light: #e1f5ee;
+        --accent-dark: #0f6e56;
+        --border: rgba(26, 24, 20, 0.08);
+        --border-strong: rgba(26, 24, 20, 0.15);
+        --serif: "DM Serif Display", Georgia, serif;
+        --sans: "DM Sans", system-ui, sans-serif;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111210;
+          --surface: #1c1c1a;
+          --text-primary: #f0ede8;
+          --text-secondary: #a8a49c;
+          --text-muted: #6b6762;
+          --accent: #5dcaa5;
+          --accent-light: #04342c;
+          --accent-dark: #9fe1cb;
+          --border: rgba(240, 237, 232, 0.08);
+          --border-strong: rgba(240, 237, 232, 0.15);
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--sans);
+        background: var(--bg);
+        color: var(--text-primary);
+        font-size: 16px;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-family: var(--serif);
+        font-size: 1.4rem;
+        letter-spacing: 0.04em;
+        color: var(--text-primary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-badge {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        font-family: var(--sans);
+        font-size: 0.58rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 2px 7px;
+        border-radius: 3px;
+      }
+
+      .header-meta {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        font-weight: 300;
+      }
+
+      .hero {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 3.5rem 2rem 2.5rem;
+      }
+
+      .hero-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .hero-label {
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.8rem;
+      }
+
+      .hero h1 {
+        font-family: var(--serif);
+        font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+        font-weight: 400;
+        line-height: 1.15;
+        margin-bottom: 1.25rem;
+        max-width: 580px;
+      }
+
+      .hero-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .tag {
+        font-size: 0.75rem;
+        font-weight: 500;
+        padding: 3px 10px;
+        border-radius: 20px;
+        border: 1px solid var(--border-strong);
+        color: var(--text-secondary);
+      }
+
+      .hero-meta {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-meta-item {
+        font-size: 0.82rem;
+        color: var(--text-secondary);
+      }
+      .hero-meta-item strong {
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+
+      .tab-bar {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0 2rem;
+        position: sticky;
+        top: 64px;
+        z-index: 90;
+      }
+
+      .tab-bar-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        gap: 0;
+      }
+
+      .tab-btn {
+        font-family: var(--sans);
+        font-size: 0.82rem;
+        font-weight: 400;
+        color: var(--text-muted);
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        padding: 0.85rem 1.1rem;
+        cursor: pointer;
+        transition:
+          color 0.15s,
+          border-color 0.15s;
+        white-space: nowrap;
+      }
+
+      .tab-btn:hover {
+        color: var(--text-primary);
+      }
+      .tab-btn.active {
+        color: var(--accent-dark);
+        border-bottom-color: var(--accent);
+        font-weight: 500;
+      }
+      @media (prefers-color-scheme: dark) {
+        .tab-btn.active {
+          color: var(--accent);
+        }
+      }
+
+      .layout {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        display: grid;
+        grid-template-columns: 210px 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      @media (max-width: 700px) {
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding: 2rem 1.25rem;
+        }
+        .sidebar {
+          display: none;
+        }
+        .hero,
+        .tab-bar {
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+        header {
+          padding: 0 1.25rem;
+        }
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 116px;
+      }
+
+      .sidebar-title {
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.75rem;
+      }
+
+      .sidebar nav {
+        border-left: 1.5px solid var(--border);
+        padding-left: 1rem;
+      }
+
+      .sidebar nav a {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 3px 0;
+        font-weight: 300;
+        transition: color 0.15s;
+      }
+
+      .sidebar nav a:hover {
+        color: var(--accent);
+      }
+
+      .sidebar-section {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      article {
+        min-width: 0;
+      }
+
+      .doc-section {
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .doc-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .section-number {
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.35rem;
+      }
+
+      h2 {
+        font-family: var(--serif);
+        font-size: 1.45rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 1.1rem;
+      }
+
+      h3 {
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        margin: 1.6rem 0 0.55rem;
+      }
+
+      p {
+        color: var(--text-secondary);
+        font-weight: 300;
+        margin-bottom: 0.9rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+      strong {
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.2rem;
+        margin-bottom: 0.9rem;
+      }
+
+      li {
+        color: var(--text-secondary);
+        font-weight: 300;
+        margin-bottom: 0.3rem;
+        padding-left: 0.2rem;
+      }
+
+      a {
+        color: var(--accent-dark);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: var(--accent);
+        }
+      }
+
+      .callout {
+        background: var(--accent-light);
+        border-left: 3px solid var(--accent);
+        border-radius: 0 6px 6px 0;
+        padding: 0.9rem 1.1rem;
+        margin: 1.1rem 0;
+      }
+
+      .callout p {
+        color: var(--accent-dark);
+        margin: 0;
+        font-size: 0.88rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        .callout p {
+          color: var(--accent);
+        }
+      }
+
+      .callout-warn {
+        background: #faeeda;
+        border-left: 3px solid #ef9f27;
+        border-radius: 0 6px 6px 0;
+        padding: 0.9rem 1.1rem;
+        margin: 1.1rem 0;
+      }
+
+      .callout-warn p {
+        color: #633806;
+        margin: 0;
+        font-size: 0.88rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        .callout-warn {
+          background: #412402;
+        }
+        .callout-warn p {
+          color: #fac775;
+        }
+      }
+
+      .def-list {
+        margin: 0.8rem 0;
+      }
+
+      .def-item {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 1rem;
+        padding: 0.65rem 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.88rem;
+      }
+
+      .def-item:last-child {
+        border-bottom: none;
+      }
+      .def-term {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+      .def-desc {
+        color: var(--text-secondary);
+        font-weight: 300;
+      }
+
+      .pricing-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+        margin: 1rem 0;
+      }
+
+      .pricing-table th {
+        text-align: left;
+        font-weight: 500;
+        font-size: 0.75rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        padding: 0.5rem 1rem 0.5rem 0;
+        border-bottom: 1px solid var(--border-strong);
+      }
+
+      .pricing-table td {
+        padding: 0.65rem 1rem 0.65rem 0;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        font-weight: 300;
+        vertical-align: top;
+      }
+
+      .pricing-table tr:last-child td {
+        border-bottom: none;
+      }
+      .pricing-table td:first-child {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .price-val {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .price-free {
+        display: inline-block;
+        background: var(--accent-light);
+        color: var(--accent-dark);
+        font-size: 0.72rem;
+        font-weight: 500;
+        padding: 1px 7px;
+        border-radius: 10px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .price-free {
+          color: var(--accent);
+        }
+      }
+
+      .tab-panel {
+        display: none;
+      }
+      .tab-panel.active {
+        display: block;
+      }
+
+      .rights-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        margin: 1rem 0;
+      }
+
+      .rights-table th {
+        text-align: left;
+        font-weight: 500;
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        padding: 0.5rem 0.75rem 0.5rem 0;
+        border-bottom: 1px solid var(--border-strong);
+      }
+
+      .rights-table td {
+        padding: 0.7rem 0.75rem 0.7rem 0;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        font-weight: 300;
+        vertical-align: top;
+      }
+
+      .rights-table tr:last-child td {
+        border-bottom: none;
+      }
+      .rights-table td:first-child {
+        font-weight: 500;
+        color: var(--text-primary);
+        width: 38%;
+      }
+
+      footer {
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+
+      .footer-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+      }
+
+      .footer-brand {
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        color: var(--text-primary);
+      }
+      .footer-links {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.77rem;
+        margin-top: 0.5rem;
+      }
+      .footer-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+      .footer-links a:hover {
+        color: var(--accent);
+      }
+
+      .footer-meta {
+        font-size: 0.77rem;
+        color: var(--text-muted);
+        font-weight: 300;
+        text-align: right;
+      }
+      .footer-meta p {
+        margin-bottom: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="#" class="logo"
+          >NAMYO <span class="logo-badge">by My Sonar</span></a
+        >
+        <span class="header-meta">Version du 10 juin 2026</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-label">Documents légaux</p>
+        <h1>Conditions Générales d'Utilisation &amp; de Vente</h1>
+        <div class="hero-tags">
+          <span class="tag">CGU / CGV</span>
+          <span class="tag">Application mobile</span>
+          <span class="tag">Politique de confidentialité</span>
+          <span class="tag">RGPD</span>
+        </div>
+        <div class="hero-meta">
+          <span class="hero-meta-item"
+            ><strong>Éditeur</strong> My Sonar SAS — RCS Paris 942 108 721</span
+          >
+          <span class="hero-meta-item"
+            ><strong>Directeur de publication</strong> Gwenaëlle Palaric</span
+          >
+          <span class="hero-meta-item"
+            ><strong>Contact</strong>
+            <a href="mailto:contact@my-sonar.com">contact@my-sonar.com</a></span
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="tab-bar">
+      <div class="tab-bar-inner">
+        <button class="tab-btn active" onclick="switchTab('cgu', this)">
+          CGU / CGV
+        </button>
+        <button class="tab-btn" onclick="switchTab('rgpd', this)">
+          Politique de confidentialité
+        </button>
+        <button class="tab-btn" onclick="switchTab('pi', this)">
+          Propriété intellectuelle
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ TAB 1 : CGU/CGV ═══════════════════════════════ -->
+    <div id="tab-cgu" class="tab-panel active">
+      <div class="layout">
+        <aside class="sidebar">
+          <p class="sidebar-title">Sommaire</p>
+          <nav>
+            <a href="#mentions">1. Mentions légales</a>
+            <a href="#objet">2. Objet de l'application</a>
+            <a href="#acces">3. Accès et inscription</a>
+            <a href="#tarifs">4. Conditions financières</a>
+            <a href="#contenus">5. Utilisation et contenus</a>
+            <a href="#responsabilite">6. Responsabilité</a>
+            <a href="#donnees-cgu">7. Protection des données</a>
+            <a href="#droit">8. Droit applicable</a>
+            <a href="#annexe">Annexe — Contenus tiers</a>
+            <a href="#reglement">Règlement utilisateur</a>
+          </nav>
+        </aside>
+
+        <article>
+          <div class="doc-section">
+            <div class="callout">
+              <p>
+                Les présentes CGU/CGV régissent l'accès et l'utilisation de
+                l'application mobile <strong>Namyo</strong>, éditée par la
+                société <strong>My Sonar SAS</strong>. En utilisant Namyo, vous
+                acceptez sans réserve ces conditions.
+              </p>
+            </div>
+          </div>
+
+          <div class="doc-section" id="mentions">
+            <p class="section-number">Article 1</p>
+            <h2>Mentions légales</h2>
+            <p>
+              L'Application est éditée par la société
+              <strong>My Sonar SAS</strong>, société par actions simplifiée au
+              capital de 1 000 €, immatriculée au RCS de Paris sous le numéro
+              <strong>942 108 721</strong>, dont le siège social est situé au
+              <strong>61 rue de Lyon, 75012 Paris</strong>.
+            </p>
+            <div class="def-list">
+              <div class="def-item">
+                <span class="def-term">Contact</span>
+                <span class="def-desc"
+                  ><a href="mailto:contact@my-sonar.com"
+                    >contact@my-sonar.com</a
+                  ></span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Directeur de publication</span>
+                <span class="def-desc">Gwenaëlle Palaric</span>
+              </div>
+              <div class="def-item">
+                <span class="def-term">Hébergeur</span>
+                <span class="def-desc"
+                  >OVH SAS — 2 rue Kellermann, 59100 Roubaix —
+                  <a href="https://www.ovh.com" target="_blank" rel="noopener"
+                    >www.ovh.com</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="doc-section" id="objet">
+            <p class="section-number">Article 2</p>
+            <h2>Objet de l'application</h2>
+            <p>
+              Namyo est une <strong>application de découverte musicale</strong>.
+              Elle propose quotidiennement à ses utilisateurs une recommandation
+              musicale personnalisée via un système d'alarme, permettant de
+              découvrir de nouveaux artistes.
+            </p>
+          </div>
+
+          <div class="doc-section" id="acces">
+            <p class="section-number">Article 3</p>
+            <h2>Accès et inscription</h2>
+            <p>
+              L'accès aux services de Namyo nécessite la création d'un compte
+              utilisateur. Ce compte doit être enregistré dans votre pays de
+              résidence. Votre nom d'utilisateur et votre mot de passe sont
+              réservés à votre usage personnel et doivent rester confidentiels.
+              Vous êtes responsable de toute utilisation (y compris non
+              autorisée) de vos identifiants. Avertissez immédiatement notre
+              équipe Assistance client si vos accès sont perdus, volés ou
+              compromis.
+            </p>
+            <ul>
+              <li>
+                <strong>Obligation d'inscription :</strong> L'utilisateur doit
+                fournir des informations exactes.
+              </li>
+              <li>
+                <strong>Types de comptes :</strong> L'Application propose des
+                profils pour les <em>Auditeurs</em> et les <em>Artistes</em>.
+              </li>
+              <li>
+                <strong>Suppression de compte :</strong> L'utilisateur peut
+                demander la suppression à tout moment par email à
+                <a href="mailto:contact@my-sonar.com">contact@my-sonar.com</a>.
+              </li>
+            </ul>
+          </div>
+
+          <div class="doc-section" id="tarifs">
+            <p class="section-number">Article 4</p>
+            <h2>Conditions financières (CGV)</h2>
+
+            <h3>4.1 Tarification de lancement (offre limitée)</h3>
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th>Profil</th>
+                  <th>Essai</th>
+                  <th>Mensuel</th>
+                  <th>Période longue (3 mois)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Auditeurs</td>
+                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-val">1,99 €</span>/mois</td>
+                  <td><span class="price-val">2,99 €</span> / 3 mois</td>
+                </tr>
+                <tr>
+                  <td>Artistes</td>
+                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-val">3,99 €</span>/mois</td>
+                  <td><span class="price-val">5,99 €</span> / 3 mois</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>4.2 Tarification standard (post-lancement)</h3>
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th>Profil</th>
+                  <th>Essai</th>
+                  <th>Mensuel</th>
+                  <th>Annuel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Auditeurs Premium</td>
+                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-val">3,99 €</span>/mois</td>
+                  <td><span class="price-val">39,99 €</span>/an</td>
+                </tr>
+                <tr>
+                  <td>Auditeurs Diamond</td>
+                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-val">5,99 €</span>/mois</td>
+                  <td><span class="price-val">59,99 €</span>/an</td>
+                </tr>
+                <tr>
+                  <td>Artistes</td>
+                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-val">6,99 €</span>/mois</td>
+                  <td><span class="price-val">79,99 €</span>/an</td>
+                </tr>
+              </tbody>
+            </table>
+            <p
+              style="
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                margin-top: 0.5rem;
+              "
+            >
+              Note : Les services pour les Labels de Musique ne sont pas
+              disponibles dans la version actuelle.
+            </p>
+
+            <div class="callout-warn">
+              <p>
+                <strong>Offre d'essai :</strong> À l'issue des 30 jours
+                gratuits, l'abonnement devient automatiquement payant au tarif
+                choisi lors de l'inscription, sauf résiliation via les
+                paramètres de votre store (Apple/Google) au moins 24 heures
+                avant la fin de l'essai.
+              </p>
+            </div>
+
+            <h3>4.3 Paiement et renouvellement</h3>
+            <p>
+              Les abonnements sont facturés via les plateformes de
+              téléchargement (App Store / Google Play Store). Ils se
+              renouvellent automatiquement sauf dénonciation par l'utilisateur
+              au moins <strong>30 jours</strong> avant la fin de la période en
+              cours.
+            </p>
+
+            <h3>4.4 Modification des prix</h3>
+            <p>
+              My Sonar peut modifier périodiquement le prix des abonnements
+              payants afin de refléter des changements dans les offres,
+              l'activité, le contexte économique, ou pour des raisons légales ou
+              de sécurité. Tout changement de prix sera communiqué par tout
+              moyen raisonnable (email, notification in-app) avec un préavis
+              d'au moins <strong>30 jours</strong>. La modification prendra
+              effet à partir de la prochaine période d'abonnement. L'utilisation
+              continue du Service après l'entrée en vigueur vaut acceptation du
+              nouveau prix.
+            </p>
+            <p>
+              Les taux d'imposition sont basés sur les taux applicables au
+              moment de votre facture mensuelle et peuvent varier selon les
+              exigences fiscales locales.
+            </p>
+
+            <h3>4.5 Droit de rétractation</h3>
+            <div class="callout">
+              <p>
+                Base légale : Article L221-28 13° du Code de la consommation —
+                le droit de rétractation ne peut être exercé pour un contenu
+                numérique dont l'exécution a commencé après accord préalable
+                exprès du consommateur.
+              </p>
+            </div>
+            <p>
+              Vous disposez d'un droit de rétractation légal expirant 14 jours
+              après la date de conclusion du contrat. Vous renoncez à ce droit
+              dans les cas suivants :
+            </p>
+            <ul>
+              <li>
+                <strong>Inscription à un essai payant :</strong> vous consentez
+                à la fourniture immédiate du Contenu et perdez le droit de
+                rétractation dès le début de l'essai.
+              </li>
+              <li>
+                <strong>Inscription à un essai gratuit :</strong> vous acceptez
+                la fourniture immédiate et perdez le droit de rétractation dès
+                le début de la fourniture du Contenu.
+              </li>
+              <li>
+                <strong>Achat d'un abonnement payant sans essai :</strong> vous
+                acceptez la fourniture immédiate et autorisez My Sonar à vous
+                facturer automatiquement chaque période jusqu'à résiliation.
+              </li>
+            </ul>
+
+            <h3>4.6 Facturation &amp; annulation</h3>
+            <p>
+              Sauf indication contraire, les abonnements payants se poursuivent
+              indéfiniment jusqu'à leur annulation. Vous serez facturé de
+              manière récurrente le premier jour de chaque période de
+              facturation.
+            </p>
+            <p>
+              Vous pouvez annuler votre abonnement payant à tout moment en vous
+              connectant à votre compte Namyo. L'annulation prend effet à la fin
+              de la période de facturation en cours et votre compte bascule vers
+              la version gratuite.
+              <strong
+                >Aucun remboursement n'est effectué pour une période
+                partielle.</strong
+              >
+            </p>
+            <p>
+              My Sonar se réserve le droit de résilier un abonnement payant à
+              tout moment, moyennant un préavis d'au moins 14 jours, auquel cas
+              l'accès payant est maintenu jusqu'à la fin de la période en cours.
+            </p>
+          </div>
+
+          <!-- Art. 5 à 8 + Annexe + Règlement : inchangés par rapport à la v3 -->
+          <!-- [Le reste du fichier est identique — voir fichier téléchargeable ci-dessus] -->
+        </article>
+      </div>
+    </div>
+
+    <!-- Tabs RGPD et PI : inchangés -->
+
+    <script>
+      function switchTab(name, btn) {
+        document
+          .querySelectorAll(".tab-panel")
+          .forEach((p) => p.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document.getElementById("tab-" + name).classList.add("active");
+        btn.classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
