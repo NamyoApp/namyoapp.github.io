@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Politique de confidentialité — NAMYO by My Sonar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #f9f7f4;
+        --surface: #ffffff;
+        --text-primary: #1a1814;
+        --text-secondary: #5a5750;
+        --text-muted: #9a968f;
+        --accent: #1d9e75;
+        --accent-light: #e1f5ee;
+        --accent-dark: #0f6e56;
+        --border: rgba(26, 24, 20, 0.08);
+        --border-strong: rgba(26, 24, 20, 0.15);
+        --serif: "DM Serif Display", Georgia, serif;
+        --sans: "DM Sans", system-ui, sans-serif;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111210;
+          --surface: #1c1c1a;
+          --text-primary: #f0ede8;
+          --text-secondary: #a8a49c;
+          --text-muted: #6b6762;
+          --accent: #5dcaa5;
+          --accent-light: #04342c;
+          --accent-dark: #9fe1cb;
+          --border: rgba(240, 237, 232, 0.08);
+          --border-strong: rgba(240, 237, 232, 0.15);
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--sans);
+        background: var(--bg);
+        color: var(--text-primary);
+        font-size: 16px;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Header */
+      header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-family: var(--serif);
+        font-size: 1.4rem;
+        letter-spacing: 0.04em;
+        color: var(--text-primary);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-badge {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        font-family: var(--sans);
+        font-size: 0.58rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 2px 7px;
+        border-radius: 3px;
+      }
+
+      .header-meta {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        font-weight: 300;
+      }
+
+      /* Hero */
+      .hero {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 3.5rem 2rem 2.5rem;
+      }
+
+      .hero-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .hero-label {
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.8rem;
+      }
+
+      .hero h1 {
+        font-family: var(--serif);
+        font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+        font-weight: 400;
+        line-height: 1.15;
+        margin-bottom: 1.25rem;
+        max-width: 580px;
+      }
+
+      .hero-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .tag {
+        font-size: 0.75rem;
+        font-weight: 500;
+        padding: 3px 10px;
+        border-radius: 20px;
+        border: 1px solid var(--border-strong);
+        color: var(--text-secondary);
+      }
+
+      .hero-meta {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-meta-item {
+        font-size: 0.82rem;
+        color: var(--text-secondary);
+      }
+      .hero-meta-item strong {
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+
+      /* Section divider */
+      .section-divider {
+        background: var(--surface);
+        border-top: 3px solid var(--accent);
+        border-bottom: 1px solid var(--border);
+        padding: 2rem 2rem 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .section-divider-inner {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .section-divider-label {
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.4rem;
+      }
+
+      .section-divider h2 {
+        font-family: var(--serif);
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 0;
+        color: var(--text-primary);
+      }
+
+      /* Layout */
+      .layout {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        display: grid;
+        grid-template-columns: 210px 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      @media (max-width: 700px) {
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding: 2rem 1.25rem;
+        }
+        .sidebar {
+          display: none;
+        }
+        .hero,
+        .section-divider {
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+        header {
+          padding: 0 1.25rem;
+        }
+      }
+
+      /* Sidebar */
+      .sidebar {
+        position: sticky;
+        top: 80px;
+      }
+
+      .sidebar-title {
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.75rem;
+      }
+
+      .sidebar nav {
+        border-left: 1.5px solid var(--border);
+        padding-left: 1rem;
+      }
+
+      .sidebar nav a {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 3px 0;
+        font-weight: 300;
+        transition: color 0.15s;
+      }
+
+      .sidebar nav a:hover {
+        color: var(--accent);
+      }
+
+      .sidebar-section {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      /* Article */
+      article {
+        min-width: 0;
+      }
+
+      .doc-section {
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .doc-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .section-number {
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.35rem;
+      }
+
+      h2 {
+        font-family: var(--serif);
+        font-size: 1.45rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin-bottom: 1.1rem;
+      }
+
+      h3 {
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        margin: 1.6rem 0 0.55rem;
+      }
+
+      p {
+        color: var(--text-secondary);
+        font-weight: 300;
+        margin-bottom: 0.9rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+      strong {
+        color: var(--text-primary);
+        font-weight: 500;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.2rem;
+        margin-bottom: 0.9rem;
+      }
+
+      li {
+        color: var(--text-secondary);
+        font-weight: 300;
+        margin-bottom: 0.3rem;
+        padding-left: 0.2rem;
+      }
+
+      a {
+        color: var(--accent-dark);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: var(--accent);
+        }
+      }
+
+      /* Callout */
+      .callout {
+        background: var(--accent-light);
+        border-left: 3px solid var(--accent);
+        border-radius: 0 6px 6px 0;
+        padding: 0.9rem 1.1rem;
+        margin: 1.1rem 0;
+      }
+
+      .callout p {
+        color: var(--accent-dark);
+        margin: 0;
+        font-size: 0.88rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        .callout p {
+          color: var(--accent);
+        }
+      }
+
+      /* Warning callout */
+      .callout-warn {
+        background: #faeeda;
+        border-left: 3px solid #ef9f27;
+        border-radius: 0 6px 6px 0;
+        padding: 0.9rem 1.1rem;
+        margin: 1.1rem 0;
+      }
+
+      .callout-warn p {
+        color: #633806;
+        margin: 0;
+        font-size: 0.88rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        .callout-warn {
+          background: #412402;
+        }
+        .callout-warn p {
+          color: #fac775;
+        }
+      }
+
+      /* Definition list */
+      .def-list {
+        margin: 0.8rem 0;
+      }
+
+      .def-item {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 1rem;
+        padding: 0.65rem 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.88rem;
+      }
+
+      .def-item:last-child {
+        border-bottom: none;
+      }
+      .def-term {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+      .def-desc {
+        color: var(--text-secondary);
+        font-weight: 300;
+      }
+
+      /* Rights table */
+      .rights-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        margin: 1rem 0;
+      }
+
+      .rights-table th {
+        text-align: left;
+        font-weight: 500;
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        padding: 0.5rem 0.75rem 0.5rem 0;
+        border-bottom: 1px solid var(--border-strong);
+      }
+
+      .rights-table td {
+        padding: 0.7rem 0.75rem 0.7rem 0;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+        font-weight: 300;
+        vertical-align: top;
+      }
+
+      .rights-table tr:last-child td {
+        border-bottom: none;
+      }
+      .rights-table td:first-child {
+        font-weight: 500;
+        color: var(--text-primary);
+        width: 38%;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+
+      .footer-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+      }
+
+      .footer-brand {
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        color: var(--text-primary);
+      }
+
+      .footer-meta {
+        font-size: 0.77rem;
+        color: var(--text-muted);
+        font-weight: 300;
+        text-align: right;
+      }
+      .footer-meta p {
+        margin-bottom: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <span class="logo"
+          >NAMYO <span class="logo-badge">by My Sonar</span></span
+        >
+        <span class="header-meta">Version du 10 juin 2026</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-label">Documents légaux</p>
+        <h1>Politique de confidentialité &amp; Protection des données</h1>
+        <div class="hero-tags">
+          <span class="tag">RGPD</span>
+          <span class="tag">Données personnelles</span>
+          <span class="tag">Confidentialité</span>
+        </div>
+        <div class="hero-meta">
+          <span class="hero-meta-item"
+            ><strong>Éditeur</strong> My Sonar SAS — RCS Paris 942 108 721</span
+          >
+          <span class="hero-meta-item"
+            ><strong>Directeur de publication</strong> Gwenaëlle Palaric</span
+          >
+          <span class="hero-meta-item"
+            ><strong>Contact</strong> contact@my-sonar.com</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Partie 2 : RGPD -->
+    <div class="section-divider" id="partie-rgpd">
+      <div class="section-divider-inner">
+        <h2>Politique de confidentialité &amp; Protection des données</h2>
+      </div>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <p class="sidebar-title">Sommaire</p>
+        <nav>
+          <a href="#rgpd-intro">1. À propos de cette politique</a>
+          <a href="#rgpd-droits">2. Vos droits</a>
+          <a href="#rgpd-collecte">3. Données collectées</a>
+          <a href="#rgpd-finalites">4. Utilisation des données</a>
+          <a href="#rgpd-partage">5. Partage des données</a>
+          <a href="#rgpd-conservation">6. Conservation</a>
+          <a href="#rgpd-transferts">7. Transferts internationaux</a>
+          <a href="#rgpd-securite">8. Sécurité</a>
+          <a href="#rgpd-enfants">9. Enfants</a>
+          <a href="#rgpd-modif">10. Modifications</a>
+          <a href="#rgpd-contact">11. Contact</a>
+        </nav>
+      </aside>
+
+      <article>
+        <div class="doc-section">
+          <div class="callout">
+            <p>
+              Cette politique décrit la manière dont My Sonar traite vos données
+              personnelles. Elle s'applique à tous les services de Namyo en tant
+              qu'utilisateur. <strong>Responsable du traitement :</strong> My
+              Sonar SAS — 61 rue de Lyon, 75012 Paris — contact@my-sonar.com
+            </p>
+          </div>
+        </div>
+
+        <div class="doc-section" id="rgpd-intro">
+          <p class="section-number">Section 1</p>
+          <h2>À propos de cette politique</h2>
+          <p>
+            Cette politique s'applique à votre utilisation de tous les services
+            Namyo :
+          </p>
+          <ul>
+            <li>Votre utilisation de Namyo sur n'importe quel appareil ;</li>
+            <li>La personnalisation de votre expérience utilisateur ;</li>
+            <li>L'infrastructure requise pour fournir nos services ;</li>
+            <li>
+              La connexion de votre compte Namyo avec une autre application ;
+            </li>
+            <li>Nos options gratuites ou payantes ;</li>
+            <li>
+              D'autres services Namyo incluant un lien vers cette Politique
+              (sites web, service client, communauté Namyo).
+            </li>
+          </ul>
+          <p>
+            De nouveaux services développés ultérieurement seront également
+            soumis à cette Politique, sauf indication contraire lors de leur
+            lancement.
+          </p>
+          <p>
+            Cette politique ne constitue pas les Conditions d'utilisation de
+            Namyo (document distinct) ni un document concernant votre
+            utilisation d'autres services disposant de leur propre politique de
+            confidentialité.
+          </p>
+        </div>
+
+        <div class="doc-section" id="rgpd-droits">
+          <p class="section-number">Section 2</p>
+          <h2>Vos droits et contrôles sur vos données personnelles</h2>
+          <table class="rights-table">
+            <thead>
+              <tr>
+                <th>Votre droit</th>
+                <th>Comment l'exercer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Information</td>
+                <td>Via cette Politique et en nous contactant.</td>
+              </tr>
+              <tr>
+                <td>Accès</td>
+                <td>
+                  Via l'outil de téléchargement sur votre page Confidentialité
+                  du compte, ou en nous contactant.
+                </td>
+              </tr>
+              <tr>
+                <td>Rectification</td>
+                <td>
+                  Via « Modifier le profil » de votre compte, ou en nous
+                  contactant.
+                </td>
+              </tr>
+              <tr>
+                <td>Suppression</td>
+                <td>
+                  Depuis le Service Namyo ou via notre page d'aide, ou en nous
+                  contactant.
+                </td>
+              </tr>
+              <tr>
+                <td>Restriction</td>
+                <td>En nous contactant.</td>
+              </tr>
+              <tr>
+                <td>Opposition</td>
+                <td>
+                  Via les contrôles du Service Namyo ou en nous contactant.
+                </td>
+              </tr>
+              <tr>
+                <td>Portabilité</td>
+                <td>
+                  My Sonar s'efforcera d'honorer toute demande dans la mesure du
+                  possible.
+                </td>
+              </tr>
+              <tr>
+                <td>Décision automatisée</td>
+                <td>
+                  My Sonar ne prend pas ce type de décision automatisée dans le
+                  Service Namyo.
+                </td>
+              </tr>
+              <tr>
+                <td>Retrait de consentement</td>
+                <td>
+                  En ajustant le contrôle approprié sur Namyo, ou en nous
+                  contactant.
+                </td>
+              </tr>
+              <tr>
+                <td>Dépôt de plainte</td>
+                <td>
+                  Contactez l'autorité locale de protection des données de votre
+                  pays.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-section" id="rgpd-collecte">
+          <p class="section-number">Section 3</p>
+          <h2>Données personnelles collectées</h2>
+
+          <h3>Lors de l'inscription</h3>
+          <div class="def-list">
+            <div class="def-item">
+              <span class="def-term">Données d'utilisateur</span>
+              <span class="def-desc"
+                >Nom affiché, adresse e-mail, mot de passe, numéro de téléphone,
+                date de naissance, genre, adresse postale, pays, âge.</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Données d'adresse postale</span>
+              <span class="def-desc"
+                >Collectées pour vérifier l'éligibilité à une option de service,
+                envoyer des avis légaux, administrer la facturation ou livrer
+                des biens physiques.</span
+              >
+            </div>
+          </div>
+
+          <h3>Lors de l'utilisation du service</h3>
+          <div class="def-list">
+            <div class="def-item">
+              <span class="def-term">Données d'utilisation</span>
+              <span class="def-desc"
+                >Interactions (recherches, historique d'écoutes, bibliothèque),
+                prompts IA, transcriptions, engagement publicitaire. Inclut
+                données techniques (URL, cookies, IP, identifiants appareil) et
+                localisation générale (pays, région, ville via IP).</span
+              >
+            </div>
+          </div>
+
+          <h3>Données supplémentaires optionnelles</h3>
+          <div class="def-list">
+            <div class="def-item">
+              <span class="def-term">Données vocales</span>
+              <span class="def-desc"
+                >Enregistrements audios si vous utilisez les fonctionnalités
+                vocales disponibles sur votre marché.</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Données de paiement</span>
+              <span class="def-desc"
+                >Nom, date de naissance, mode de paiement, type de carte, date
+                d'expiration. My Sonar ne conserve jamais le numéro complet de
+                la carte.</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Vérification d'âge</span>
+              <span class="def-desc"
+                >Photo de pièce d'identité ou estimation faciale. Immédiatement
+                supprimées une fois la vérification terminée.</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Messages</span>
+              <span class="def-desc"
+                >Texte ou contenus envoyés directement à un autre membre, si la
+                messagerie est disponible sur votre marché.</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Données d'enquêtes</span>
+              <span class="def-desc"
+                >Données communiquées lors de réponses à des enquêtes ou
+                participations à des études utilisateur.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="doc-section" id="rgpd-finalites">
+          <p class="section-number">Section 4</p>
+          <h2>Utilisation de vos données personnelles</h2>
+          <p>
+            Bases juridiques applicables :
+            <strong>exécution d'un contrat</strong>,
+            <strong>intérêt légitime</strong>, <strong>consentement</strong>,
+            <strong>obligations juridiques</strong>.
+          </p>
+          <table class="rights-table">
+            <thead>
+              <tr>
+                <th>Finalité</th>
+                <th>Base juridique</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Fournir le Service Namyo (compte, personnalisation,
+                  recommandations)
+                </td>
+                <td>Exécution d'un contrat</td>
+              </tr>
+              <tr>
+                <td>Diagnostiquer et résoudre des problèmes avec le Service</td>
+                <td>Exécution d'un contrat</td>
+              </tr>
+              <tr>
+                <td>Fonctionnalités facultatives supplémentaires</td>
+                <td>Consentement</td>
+              </tr>
+              <tr>
+                <td>
+                  Évaluer et développer de nouvelles fonctionnalités (modèles
+                  IA, recommandations)
+                </td>
+                <td>Intérêt légitime</td>
+              </tr>
+              <tr>
+                <td>
+                  Marketing, promotion et publicité avec consentement requis
+                </td>
+                <td>Consentement</td>
+              </tr>
+              <tr>
+                <td>Publicité personnalisée selon vos intérêts</td>
+                <td>Intérêt légitime</td>
+              </tr>
+              <tr>
+                <td>Conformité aux obligations juridiques</td>
+                <td>Obligations juridiques</td>
+              </tr>
+              <tr>
+                <td>Traiter votre paiement</td>
+                <td>Exécution d'un contrat / Consentement</td>
+              </tr>
+              <tr>
+                <td>Sécuriser le Service et détecter/prévenir la fraude</td>
+                <td>Intérêt légitime</td>
+              </tr>
+              <tr>
+                <td>Réaliser des études et enquêtes</td>
+                <td>Intérêt légitime</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-section" id="rgpd-partage">
+          <p class="section-number">Section 5</p>
+          <h2>Partage de vos données personnelles</h2>
+
+          <h3>Informations publiques</h3>
+          <p>
+            Restent accessibles publiquement sur le Service (sauf aux personnes
+            bloquées) : votre nom de profil, votre photo de profil, et tout
+            autre contenu publié sur le Service.
+          </p>
+
+          <h3>Données susceptibles d'être partagées</h3>
+          <div class="def-list">
+            <div class="def-item">
+              <span class="def-term">Fournisseurs de services</span>
+              <span class="def-desc"
+                >Service client, infrastructure technique, sécurité, marketing
+                des produits et événements Namyo.</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Partenaires publicitaires</span>
+              <span class="def-desc"
+                >Proposer des publicités plus pertinentes sur le Service et
+                mesurer leur efficacité.</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Artistes et maisons de disques</span>
+              <span class="def-desc"
+                >Recevoir des actualités ou offres promotionnelles d'artistes ou
+                labels, sur votre consentement (révocable à tout moment).</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Chercheurs universitaires</span>
+              <span class="def-desc"
+                >Analyses statistiques et études académiques uniquement —
+                données pseudonymisées.</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Autorités judiciaires</span>
+              <span class="def-desc"
+                >My Sonar peut partager vos données pour se conformer à une
+                obligation juridique ou répondre à une procédure judiciaire
+                valide.</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="doc-section" id="rgpd-conservation">
+          <p class="section-number">Section 6</p>
+          <h2>Conservation des données</h2>
+          <ul>
+            <li>
+              <strong>Données jusqu'à suppression par vous :</strong> vous
+              pouvez les supprimer directement depuis le Service.
+            </li>
+            <li>
+              <strong>Données avec expiration spécifique :</strong> ex. les
+              données de recherches sont supprimées après 90 jours.
+            </li>
+            <li>
+              <strong>Données jusqu'à la suppression du compte :</strong>
+              identifiant Namyo, informations de profil, historique de streaming
+              — supprimées ou anonymisées à la clôture du compte.
+            </li>
+            <li>
+              <strong
+                >Données conservées longtemps à des fins limitées :</strong
+              >
+              après suppression du compte, certaines données peuvent être
+              conservées pour obligations légales, sécurité ou résolution de
+              litiges.
+            </li>
+            <li>
+              <strong>Données de vérification d'âge :</strong> immédiatement
+              supprimées une fois la vérification terminée.
+            </li>
+          </ul>
+        </div>
+
+        <div class="doc-section" id="rgpd-transferts">
+          <p class="section-number">Section 7</p>
+          <h2>Transferts vers d'autres pays</h2>
+          <p>
+            Vos données peuvent être traitées dans des pays dont les lois sur la
+            protection des données diffèrent de celles de l'UE/EEE. Les
+            transferts reposent sur :
+          </p>
+          <ul>
+            <li>
+              <strong>Décisions d'adéquation</strong> de la Commission
+              européenne pour les pays couverts ;
+            </li>
+            <li>
+              <strong>Clauses Contractuelles Types (CCT)</strong> pour les
+              autres pays hors UE/EEE, garantissant une protection équivalente.
+            </li>
+          </ul>
+          <p>
+            My Sonar applique des protections supplémentaires : chiffrement,
+            pseudonymisation, évaluations des transferts, et politiques
+            permettant de contester les demandes disproportionnées d'autorités
+            gouvernementales.
+          </p>
+        </div>
+
+        <div class="doc-section" id="rgpd-securite">
+          <p class="section-number">Section 8</p>
+          <h2>Protection de vos données personnelles</h2>
+          <p>
+            My Sonar met en œuvre des mesures techniques et organisationnelles
+            appropriées (pseudonymisation, chiffrement, politiques d'accès et de
+            conservation). Aucun système n'est toutefois totalement sécurisé.
+          </p>
+          <p>Pour protéger votre compte, nous vous recommandons de :</p>
+          <ul>
+            <li>
+              Définir un mot de passe fort utilisé uniquement pour votre compte
+              Namyo ;
+            </li>
+            <li>Ne jamais partager votre mot de passe avec quiconque ;</li>
+            <li>
+              Vous déconnecter après chaque utilisation sur un appareil partagé.
+            </li>
+          </ul>
+        </div>
+
+        <div class="doc-section" id="rgpd-enfants">
+          <p class="section-number">Section 9</p>
+          <h2>Enfants</h2>
+          <p>
+            Le Service Namyo est soumis à une limite d'âge minimale dans chaque
+            pays. Si vous êtes en dessous de cette limite d'âge, ne créez pas de
+            compte et n'utilisez pas le Service Namyo standard. Les mineurs
+            au-dessus de la limite d'âge mais n'ayant pas atteint la majorité ne
+            peuvent utiliser le Service qu'avec le consentement d'un parent ou
+            tuteur légal.
+          </p>
+          <div class="callout-warn">
+            <p>
+              My Sonar ne collecte ni n'utilise sciemment les données
+              personnelles d'enfants en dessous de la limite d'âge applicable.
+              Si vous êtes parent et constatez que votre enfant a fourni des
+              données à My Sonar, contactez-nous immédiatement.
+            </p>
+          </div>
+        </div>
+
+        <div class="doc-section" id="rgpd-modif">
+          <p class="section-number">Section 10</p>
+          <h2>Modifications apportées à cette politique</h2>
+          <p>
+            My Sonar peut de temps à autre apporter des modifications à cette
+            Politique. Lors de modifications importantes, nous vous en informons
+            clairement : notification visible dans le Service Namyo, e-mail ou
+            notification sur votre appareil.
+          </p>
+        </div>
+
+        <div class="doc-section" id="rgpd-contact">
+          <p class="section-number">Section 11</p>
+          <h2>Comment nous contacter</h2>
+          <p>
+            Pour toute question concernant cette Politique, contactez notre
+            délégué à la protection des données :
+          </p>
+          <div class="def-list">
+            <div class="def-item">
+              <span class="def-term">Société</span>
+              <span class="def-desc"
+                >My Sonar SAS — Délégué à la Protection des Données</span
+              >
+            </div>
+            <div class="def-item">
+              <span class="def-term">Adresse</span>
+              <span class="def-desc">61 rue de Lyon, 75012 Paris</span>
+            </div>
+            <div class="def-item">
+              <span class="def-term">E-mail</span>
+              <span class="def-desc">contact@my-sonar.com</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">NAMYO</p>
+        </div>
+        <div class="footer-meta">
+          <p>© 2026 My Sonar SAS — Tous droits réservés</p>
+          <p>Capital social 1 000 € — RCS Paris 942 108 721</p>
+          <p>61 rue de Lyon, 75012 Paris</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
