@@ -62,6 +62,7 @@
         -webkit-font-smoothing: antialiased;
       }
 
+      /* Header */
       header {
         background: var(--surface);
         border-bottom: 1px solid var(--border);
@@ -110,6 +111,7 @@
         font-weight: 300;
       }
 
+      /* Hero */
       .hero {
         background: var(--surface);
         border-bottom: 1px solid var(--border);
@@ -170,6 +172,7 @@
         font-weight: 500;
       }
 
+      /* Tab nav */
       .tab-bar {
         background: var(--surface);
         border-bottom: 1px solid var(--border);
@@ -216,6 +219,7 @@
         }
       }
 
+      /* Layout */
       .layout {
         max-width: 900px;
         margin: 0 auto;
@@ -245,6 +249,7 @@
         }
       }
 
+      /* Sidebar */
       .sidebar {
         position: sticky;
         top: 116px;
@@ -284,6 +289,7 @@
         border-top: 1px solid var(--border);
       }
 
+      /* Article */
       article {
         min-width: 0;
       }
@@ -364,6 +370,7 @@
         }
       }
 
+      /* Callout */
       .callout {
         background: var(--accent-light);
         border-left: 3px solid var(--accent);
@@ -383,6 +390,7 @@
         }
       }
 
+      /* Warning callout */
       .callout-warn {
         background: #faeeda;
         border-left: 3px solid #ef9f27;
@@ -405,6 +413,7 @@
         }
       }
 
+      /* Definition list */
       .def-list {
         margin: 0.8rem 0;
       }
@@ -430,6 +439,7 @@
         font-weight: 300;
       }
 
+      /* Pricing table */
       .pricing-table {
         width: 100%;
         border-collapse: collapse;
@@ -459,6 +469,7 @@
       .pricing-table tr:last-child td {
         border-bottom: none;
       }
+
       .pricing-table td:first-child {
         font-weight: 500;
         color: var(--text-primary);
@@ -485,6 +496,7 @@
         }
       }
 
+      /* Tab panels */
       .tab-panel {
         display: none;
       }
@@ -492,6 +504,7 @@
         display: block;
       }
 
+      /* Rights table */
       .rights-table {
         width: 100%;
         border-collapse: collapse;
@@ -527,6 +540,7 @@
         width: 38%;
       }
 
+      /* Footer */
       footer {
         background: var(--surface);
         border-top: 1px solid var(--border);
@@ -580,7 +594,7 @@
         <a href="#" class="logo"
           >NAMYO <span class="logo-badge">by My Sonar</span></a
         >
-        <span class="header-meta">Version du 10 juin 2026</span>
+        <span class="header-meta">Version du 10 juin 2026 — v5</span>
       </div>
     </header>
 
@@ -654,6 +668,7 @@
             </div>
           </div>
 
+          <!-- Art. 1 -->
           <div class="doc-section" id="mentions">
             <p class="section-number">Article 1</p>
             <h2>Mentions légales</h2>
@@ -689,6 +704,7 @@
             </div>
           </div>
 
+          <!-- Art. 2 -->
           <div class="doc-section" id="objet">
             <p class="section-number">Article 2</p>
             <h2>Objet de l'application</h2>
@@ -700,6 +716,7 @@
             </p>
           </div>
 
+          <!-- Art. 3 -->
           <div class="doc-section" id="acces">
             <p class="section-number">Article 3</p>
             <h2>Accès et inscription</h2>
@@ -730,9 +747,25 @@
             </ul>
           </div>
 
+          <!-- Art. 4 -->
           <div class="doc-section" id="tarifs">
             <p class="section-number">Article 4</p>
             <h2>Conditions financières (CGV)</h2>
+
+            <div class="callout">
+              <p>
+                <strong>Offre de lancement — premiers utilisateurs :</strong>
+                Dans le cadre du lancement de l'application NAMYO, My Sonar SAS
+                propose à ses premiers utilisateurs une période d'accès gratuit
+                à titre promotionnel. Cette offre est accordée intuitu personae,
+                pour une durée limitée et dans la limite des places disponibles.
+                Elle ne constitue pas un droit acquis et peut être modifiée ou
+                retirée à tout moment par My Sonar SAS, sans préavis, dans les
+                conditions prévues à l'article 4.4. À l'issue de la période
+                gratuite, l'accès au Service est conditionné à la souscription
+                d'un abonnement payant dans les conditions définies ci-après.
+              </p>
+            </div>
 
             <h3>4.1 Tarification de lancement (offre limitée)</h3>
             <table class="pricing-table">
@@ -747,13 +780,13 @@
               <tbody>
                 <tr>
                   <td>Auditeurs</td>
-                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-free">7 jours gratuits</span></td>
                   <td><span class="price-val">1,99 €</span>/mois</td>
                   <td><span class="price-val">2,99 €</span> / 3 mois</td>
                 </tr>
                 <tr>
                   <td>Artistes</td>
-                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-free">7 jours gratuits</span></td>
                   <td><span class="price-val">3,99 €</span>/mois</td>
                   <td><span class="price-val">5,99 €</span> / 3 mois</td>
                 </tr>
@@ -773,19 +806,19 @@
               <tbody>
                 <tr>
                   <td>Auditeurs Premium</td>
-                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-free">7 jours gratuits</span></td>
                   <td><span class="price-val">3,99 €</span>/mois</td>
                   <td><span class="price-val">39,99 €</span>/an</td>
                 </tr>
                 <tr>
                   <td>Auditeurs Diamond</td>
-                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-free">7 jours gratuits</span></td>
                   <td><span class="price-val">5,99 €</span>/mois</td>
                   <td><span class="price-val">59,99 €</span>/an</td>
                 </tr>
                 <tr>
                   <td>Artistes</td>
-                  <td><span class="price-free">30 jours gratuits</span></td>
+                  <td><span class="price-free">7 jours gratuits</span></td>
                   <td><span class="price-val">6,99 €</span>/mois</td>
                   <td><span class="price-val">79,99 €</span>/an</td>
                 </tr>
@@ -804,11 +837,10 @@
 
             <div class="callout-warn">
               <p>
-                <strong>Offre d'essai :</strong> À l'issue des 30 jours
-                gratuits, l'abonnement devient automatiquement payant au tarif
-                choisi lors de l'inscription, sauf résiliation via les
-                paramètres de votre store (Apple/Google) au moins 24 heures
-                avant la fin de l'essai.
+                <strong>Offre d'essai :</strong> À l'issue des 7 jours gratuits,
+                l'abonnement devient automatiquement payant au tarif choisi lors
+                de l'inscription, sauf résiliation via les paramètres de votre
+                store (Apple/Google) au moins 24 heures avant la fin de l'essai.
               </p>
             </div>
 
@@ -817,7 +849,7 @@
               Les abonnements sont facturés via les plateformes de
               téléchargement (App Store / Google Play Store). Ils se
               renouvellent automatiquement sauf dénonciation par l'utilisateur
-              au moins <strong>30 jours</strong> avant la fin de la période en
+              au moins <strong>7 jours</strong> avant la fin de la période en
               cours.
             </p>
 
@@ -895,13 +927,944 @@
             </p>
           </div>
 
-          <!-- Art. 5 à 8 + Annexe + Règlement : inchangés par rapport à la v3 -->
-          <!-- [Le reste du fichier est identique — voir fichier téléchargeable ci-dessus] -->
+          <!-- Art. 5 -->
+          <div class="doc-section" id="contenus">
+            <p class="section-number">Article 5</p>
+            <h2>Utilisation des services et contenus</h2>
+
+            <h3>5.1 Photos et propriété intellectuelle</h3>
+            <p>
+              <strong>Photos de profil :</strong> L'utilisateur peut publier une
+              photo de profil. Il garantit détenir les droits sur cette image et
+              qu'elle ne porte pas atteinte à l'ordre public.
+            </p>
+            <p>
+              Tous les éléments de l'Application (logos, algorithmes) sont la
+              propriété exclusive de My Sonar ou de ses partenaires.
+            </p>
+
+            <h3>5.2 Contenus musicaux et liens externes</h3>
+            <p>
+              L'Application permet aux Utilisateurs (notamment les Artistes)
+              d'intégrer des liens vers des plateformes tierces de streaming
+              (Spotify, Apple Music, Deezer, etc.).
+            </p>
+            <ul>
+              <li>
+                <strong>Absence de propriété :</strong> My Sonar ne détient,
+                n'héberge ni ne stocke aucun fichier musical sur ses serveurs.
+                Les œuvres sont diffusées via un lecteur intégré ou des
+                redirections vers les plateformes tierces.
+              </li>
+              <li>
+                <strong>Droits d'auteur :</strong> Les Artistes garantissent
+                qu'ils disposent de tous les droits nécessaires pour partager
+                ces liens. La propriété intellectuelle des morceaux reste celle
+                des artistes ou de leurs ayants droit.
+              </li>
+              <li>
+                <strong>Licences tierces :</strong> L'écoute est soumise aux CGU
+                des plateformes tierces. My Sonar n'est pas responsable d'une
+                rupture de service ou d'une suppression de contenu sur ces
+                plateformes.
+              </li>
+            </ul>
+            <p>
+              Vous êtes seul responsable de tout le Contenu utilisateur que vous
+              publiez. Vous garantissez que ce contenu : (1) vous appartient ou
+              que vous avez le droit de le publier ; (2) n'enfreint pas les
+              présentes Conditions, la loi, la propriété intellectuelle ou les
+              droits de tiers.
+            </p>
+
+            <h3>5.3 Surveillance du contenu utilisateur</h3>
+            <p>
+              My Sonar peut, sans y être généralement tenue, surveiller ou
+              réviser le Contenu utilisateur. My Sonar se réserve le droit de
+              prendre des mesures affectant la disponibilité, la visibilité et
+              l'accessibilité du Contenu utilisateur, conformément à ses règles
+              de plateforme.
+            </p>
+
+            <h3>5.4 Licences que vous nous accordez</h3>
+            <p>
+              Vous conservez la propriété de votre Contenu utilisateur.
+              Toutefois, pour le rendre disponible sur le Service, vous accordez
+              à My Sonar une
+              <strong
+                >licence non exclusive, transférable, pouvant donner lieu à une
+                sous-licence, libre de droits, irrévocable et mondiale</strong
+              >
+              pour reproduire, rendre disponible, exécuter, afficher, traduire,
+              modifier, créer des œuvres dérivées, distribuer et utiliser ce
+              Contenu par tout moyen connu ou créé ultérieurement. Le cas
+              échéant, vous renoncez à tout droit moral sur ce Contenu, dans la
+              mesure permise par la loi applicable.
+            </p>
+
+            <h3>5.5 Commentaires</h3>
+            <p>
+              Si vous fournissez des idées, suggestions ou autres commentaires
+              concernant le Service (les « Commentaires »), ceux-ci ne sont pas
+              confidentiels et peuvent être utilisés par My Sonar sans
+              restriction ni paiement.
+            </p>
+
+            <h3>5.6 Votre appareil</h3>
+            <p>
+              Vous accordez à My Sonar le droit d'utiliser le processeur, la
+              bande passante et le stockage de votre appareil pour faciliter le
+              fonctionnement du Service, et de vous fournir des publicités et
+              informations conformément à la Politique de confidentialité de My
+              Sonar.
+            </p>
+
+            <h3>5.7 Expérience de contenu</h3>
+            <p>
+              My Sonar vise à créer des expériences uniques pour chaque
+              utilisateur. Le Contenu auquel vous accédez, y compris sa
+              sélection et son placement, peut être influencé par des
+              considérations commerciales et des accords conclus avec des tiers.
+              Certains Contenus peuvent inclure de la publicité.
+            </p>
+          </div>
+
+          <!-- Art. 6 -->
+          <div class="doc-section" id="responsabilite">
+            <p class="section-number">Article 6</p>
+            <h2>Responsabilité</h2>
+            <p>
+              My Sonar s'efforce d'assurer un accès 24h/24. Toutefois, sa
+              responsabilité ne saurait être engagée en cas de panne réseau,
+              d'interruption pour maintenance ou d'incompatibilité avec le
+              terminal de l'utilisateur.
+            </p>
+            <p>
+              <strong>Contenu tiers :</strong> Namyo est un outil de
+              recommandation. My Sonar n'est pas responsable du contenu des
+              morceaux musicaux proposés, qui relèvent de la responsabilité des
+              ayants droit.
+            </p>
+
+            <h3>6.1 Contenus tiers</h3>
+            <p>
+              En tant que plateforme de découverte, Namyo propose des
+              redirections vers des contenus gérés par des tiers. My Sonar
+              décline toute responsabilité sur :
+            </p>
+            <ul>
+              <li>
+                La disponibilité effective des morceaux sur les plateformes de
+                streaming (Spotify, Apple Music, Deezer, etc.) ;
+              </li>
+              <li>
+                Tout litige relatif aux droits d'auteur entre l'Artiste et sa
+                maison de disques ou son distributeur ;
+              </li>
+              <li>
+                Les éventuelles publicités ou abonnements requis par les
+                plateformes tierces pour l'écoute complète des titres.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Art. 7 -->
+          <div class="doc-section" id="donnees-cgu">
+            <p class="section-number">Article 7</p>
+            <h2>Protection des données (RGPD)</h2>
+            <p>
+              My Sonar collecte et traite des données personnelles (email,
+              préférences musicales, données de connexion). Pour le détail
+              complet des traitements, bases juridiques et droits des
+              utilisateurs, veuillez consulter la
+              <strong>Politique de Protection des Données Personnelles</strong>
+              accessible via l'onglet « Politique de confidentialité »
+              ci-dessus.
+            </p>
+            <p>
+              <strong>Droits RGPD :</strong> accès, rectification, suppression —
+              en écrivant à :
+              <a href="mailto:contact@my-sonar.com">contact@my-sonar.com</a>.
+            </p>
+          </div>
+
+          <!-- Art. 8 -->
+          <div class="doc-section" id="droit">
+            <p class="section-number">Article 8</p>
+            <h2>Droit applicable</h2>
+            <p>
+              Les présentes CGU/CGV sont soumises au
+              <strong>droit français</strong>. En cas de litige, et après
+              tentative de résolution amiable, les tribunaux de Paris seront
+              seuls compétents.
+            </p>
+          </div>
+
+          <!-- Annexe -->
+          <div class="doc-section" id="annexe">
+            <p class="section-number">Annexe</p>
+            <h2>Clause contenus tiers (Spotify / Deezer)</h2>
+            <p>
+              Le Service Namyo interagit avec des applications, sites web et
+              services tiers (Spotify, Apple Music, Deezer). Ces services tiers
+              ont leurs propres conditions d'utilisation. My Sonar ne garantit
+              pas la compatibilité continue avec ces services ni la
+              disponibilité des catalogues musicaux de ces tiers.
+            </p>
+          </div>
+
+          <!-- Règlement utilisateur -->
+          <div class="doc-section" id="reglement">
+            <p class="section-number">Règlement</p>
+            <h2>Règlement pour les utilisateurs de Namyo</h2>
+            <p>
+              Ces directives sont conçues pour garantir une utilisation agréable
+              des Services pour tous. Toute violation peut entraîner la
+              suppression du contenu et/ou la résiliation/suspension de votre
+              compte. Les tentatives de contournement des mesures d'exécution (y
+              compris la création de nouveaux comptes) sont interdites.
+            </p>
+
+            <h3>Ce qui n'est pas autorisé — Services et contenu</h3>
+            <ul>
+              <li>
+                Ingénierie inverse, décompilation, désassemblage, modification
+                ou création d'œuvres dérivées (sauf si expressément permis par
+                le droit applicable) ;
+              </li>
+              <li>
+                Copie, redistribution, extraction, enregistrement ou mise à
+                disposition du public non autorisée ;
+              </li>
+              <li>
+                Importation ou copie de fichiers que vous n'avez pas le droit
+                légal d'importer ou copier ;
+              </li>
+              <li>
+                Techniques d'indexation ou d'extraction automatisées (bots,
+                scrapers) pour collecter des informations ou entraîner des
+                modèles d'IA ;
+              </li>
+              <li>
+                Vente, location, sous-licence ou toute autre forme de
+                monétisation non expressément autorisée ;
+              </li>
+              <li>
+                Augmentation artificielle des lectures ou abonnements, ou
+                promotion artificielle du Contenu ;
+              </li>
+              <li>
+                Blocage de publicités ou distribution d'outils de blocage de
+                publicités ;
+              </li>
+              <li>
+                Partage de votre mot de passe ou utilisation des identifiants
+                d'un autre utilisateur.
+              </li>
+            </ul>
+
+            <h3>Ce qui n'est pas autorisé — Activités et contenus</h3>
+            <ul>
+              <li>
+                Activités illégales ou visant à promouvoir des actes illégaux ;
+              </li>
+              <li>
+                Inclusion de mots de passe ou données personnelles de tiers ;
+              </li>
+              <li>
+                Exposition d'informations confidentielles non destinées à une
+                diffusion publique ;
+              </li>
+              <li>
+                Contenus malveillants (malware, chevaux de Troie, virus) ;
+              </li>
+              <li>
+                Usurpation d'identité ou représentation inexacte d'une
+                affiliation avec Namyo ;
+              </li>
+              <li>
+                Transmission de spam, chaînes de lettres ou courriers non
+                sollicités ;
+              </li>
+              <li>
+                Perturbation ou attaque du Service Namyo, de ses systèmes ou de
+                ses mesures de sécurité ;
+              </li>
+              <li>
+                Contenu précédemment retiré pour violation des conditions ou
+                politiques de Namyo.
+              </li>
+            </ul>
+          </div>
         </article>
       </div>
     </div>
 
-    <!-- Tabs RGPD et PI : inchangés -->
+    <!-- ═══════════════════════════════ TAB 2 : RGPD ═══════════════════════════════ -->
+    <div id="tab-rgpd" class="tab-panel">
+      <div class="layout">
+        <aside class="sidebar">
+          <p class="sidebar-title">Sommaire</p>
+          <nav>
+            <a href="#rgpd-intro">1. À propos de cette politique</a>
+            <a href="#rgpd-droits">2. Vos droits</a>
+            <a href="#rgpd-collecte">3. Données collectées</a>
+            <a href="#rgpd-finalites">4. Utilisation des données</a>
+            <a href="#rgpd-partage">5. Partage des données</a>
+            <a href="#rgpd-conservation">6. Conservation</a>
+            <a href="#rgpd-transferts">7. Transferts internationaux</a>
+            <a href="#rgpd-securite">8. Sécurité</a>
+            <a href="#rgpd-enfants">9. Enfants</a>
+            <a href="#rgpd-modif">10. Modifications</a>
+            <a href="#rgpd-contact">11. Contact</a>
+          </nav>
+        </aside>
+
+        <article>
+          <div class="doc-section">
+            <div class="callout">
+              <p>
+                Cette politique décrit la manière dont My Sonar traite vos
+                données personnelles. Elle s'applique à tous les services de
+                Namyo en tant qu'utilisateur.
+                <strong>Responsable du traitement :</strong> My Sonar SAS — 61
+                rue de Lyon, 75012 Paris —
+                <a href="mailto:contact@my-sonar.com">contact@my-sonar.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="doc-section" id="rgpd-intro">
+            <p class="section-number">Section 1</p>
+            <h2>À propos de cette politique</h2>
+            <p>
+              Cette politique s'applique à votre utilisation de tous les
+              services Namyo :
+            </p>
+            <ul>
+              <li>Votre utilisation de Namyo sur n'importe quel appareil ;</li>
+              <li>La personnalisation de votre expérience utilisateur ;</li>
+              <li>L'infrastructure requise pour fournir nos services ;</li>
+              <li>
+                La connexion de votre compte Namyo avec une autre application ;
+              </li>
+              <li>Nos options gratuites ou payantes ;</li>
+              <li>
+                D'autres services Namyo incluant un lien vers cette Politique
+                (sites web, service client, communauté Namyo).
+              </li>
+            </ul>
+            <p>
+              De nouveaux services développés ultérieurement seront également
+              soumis à cette Politique, sauf indication contraire lors de leur
+              lancement.
+            </p>
+            <p>
+              Cette politique ne constitue pas les Conditions d'utilisation de
+              Namyo (document distinct) ni un document concernant votre
+              utilisation d'autres services disposant de leur propre politique
+              de confidentialité.
+            </p>
+          </div>
+
+          <div class="doc-section" id="rgpd-droits">
+            <p class="section-number">Section 2</p>
+            <h2>Vos droits et contrôles sur vos données personnelles</h2>
+            <table class="rights-table">
+              <thead>
+                <tr>
+                  <th>Votre droit</th>
+                  <th>Comment l'exercer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Information</td>
+                  <td>Via cette Politique et en nous contactant.</td>
+                </tr>
+                <tr>
+                  <td>Accès</td>
+                  <td>
+                    Via l'outil de téléchargement sur votre page Confidentialité
+                    du compte, ou en nous contactant.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Rectification</td>
+                  <td>
+                    Via « Modifier le profil » de votre compte, ou en nous
+                    contactant.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Suppression</td>
+                  <td>
+                    Depuis le Service Namyo ou via notre page d'aide, ou en nous
+                    contactant.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Restriction</td>
+                  <td>En nous contactant.</td>
+                </tr>
+                <tr>
+                  <td>Opposition</td>
+                  <td>
+                    Via les contrôles du Service Namyo ou en nous contactant.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Portabilité</td>
+                  <td>
+                    My Sonar s'efforcera d'honorer toute demande dans la mesure
+                    du possible.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Décision automatisée</td>
+                  <td>
+                    My Sonar ne prend pas ce type de décision automatisée dans
+                    le Service Namyo.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Retrait de consentement</td>
+                  <td>
+                    En ajustant le contrôle approprié sur Namyo, ou en nous
+                    contactant.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Dépôt de plainte</td>
+                  <td>
+                    Contactez l'autorité locale de protection des données de
+                    votre pays.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="doc-section" id="rgpd-collecte">
+            <p class="section-number">Section 3</p>
+            <h2>Données personnelles collectées</h2>
+
+            <h3>Lors de l'inscription</h3>
+            <div class="def-list">
+              <div class="def-item">
+                <span class="def-term">Données d'utilisateur</span>
+                <span class="def-desc"
+                  >Nom affiché, adresse e-mail, mot de passe, numéro de
+                  téléphone, date de naissance, genre, adresse postale, pays,
+                  âge.</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Données d'adresse postale</span>
+                <span class="def-desc"
+                  >Collectées pour vérifier l'éligibilité à une option de
+                  service, envoyer des avis légaux, administrer la facturation
+                  ou livrer des biens physiques.</span
+                >
+              </div>
+            </div>
+
+            <h3>Lors de l'utilisation du service</h3>
+            <div class="def-list">
+              <div class="def-item">
+                <span class="def-term">Données d'utilisation</span>
+                <span class="def-desc"
+                  >Interactions (recherches, historique d'écoutes,
+                  bibliothèque), prompts IA, transcriptions, engagement
+                  publicitaire. Inclut données techniques (URL, cookies, IP,
+                  identifiants appareil) et localisation générale (pays, région,
+                  ville via IP).</span
+                >
+              </div>
+            </div>
+
+            <h3>Données supplémentaires optionnelles</h3>
+            <div class="def-list">
+              <div class="def-item">
+                <span class="def-term">Données vocales</span>
+                <span class="def-desc"
+                  >Enregistrements audios si vous utilisez les fonctionnalités
+                  vocales disponibles sur votre marché.</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Données de paiement</span>
+                <span class="def-desc"
+                  >Nom, date de naissance, mode de paiement, type de carte, date
+                  d'expiration. My Sonar ne conserve jamais le numéro complet de
+                  la carte.</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Vérification d'âge</span>
+                <span class="def-desc"
+                  >Photo de pièce d'identité ou estimation faciale.
+                  Immédiatement supprimées une fois la vérification
+                  terminée.</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Messages</span>
+                <span class="def-desc"
+                  >Texte ou contenus envoyés directement à un autre membre, si
+                  la messagerie est disponible sur votre marché.</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Données d'enquêtes</span>
+                <span class="def-desc"
+                  >Données communiquées lors de réponses à des enquêtes ou
+                  participations à des études utilisateur.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="doc-section" id="rgpd-finalites">
+            <p class="section-number">Section 4</p>
+            <h2>Utilisation de vos données personnelles</h2>
+            <p>
+              Bases juridiques applicables :
+              <strong>exécution d'un contrat</strong>,
+              <strong>intérêt légitime</strong>, <strong>consentement</strong>,
+              <strong>obligations juridiques</strong>.
+            </p>
+            <table class="rights-table">
+              <thead>
+                <tr>
+                  <th>Finalité</th>
+                  <th>Base juridique</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Fournir le Service Namyo (compte, personnalisation,
+                    recommandations)
+                  </td>
+                  <td>Exécution d'un contrat</td>
+                </tr>
+                <tr>
+                  <td>
+                    Diagnostiquer et résoudre des problèmes avec le Service
+                  </td>
+                  <td>Exécution d'un contrat</td>
+                </tr>
+                <tr>
+                  <td>Fonctionnalités facultatives supplémentaires</td>
+                  <td>Consentement</td>
+                </tr>
+                <tr>
+                  <td>
+                    Évaluer et développer de nouvelles fonctionnalités (modèles
+                    IA, recommandations)
+                  </td>
+                  <td>Intérêt légitime</td>
+                </tr>
+                <tr>
+                  <td>
+                    Marketing, promotion et publicité avec consentement requis
+                  </td>
+                  <td>Consentement</td>
+                </tr>
+                <tr>
+                  <td>Publicité personnalisée selon vos intérêts</td>
+                  <td>Intérêt légitime</td>
+                </tr>
+                <tr>
+                  <td>Conformité aux obligations juridiques</td>
+                  <td>Obligations juridiques</td>
+                </tr>
+                <tr>
+                  <td>Traiter votre paiement</td>
+                  <td>Exécution d'un contrat / Consentement</td>
+                </tr>
+                <tr>
+                  <td>Sécuriser le Service et détecter/prévenir la fraude</td>
+                  <td>Intérêt légitime</td>
+                </tr>
+                <tr>
+                  <td>Réaliser des études et enquêtes</td>
+                  <td>Intérêt légitime</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="doc-section" id="rgpd-partage">
+            <p class="section-number">Section 5</p>
+            <h2>Partage de vos données personnelles</h2>
+
+            <h3>Informations publiques</h3>
+            <p>
+              Restent accessibles publiquement sur le Service (sauf aux
+              personnes bloquées) : votre nom de profil, votre photo de profil,
+              et tout autre contenu publié sur le Service.
+            </p>
+
+            <h3>Données susceptibles d'être partagées</h3>
+            <div class="def-list">
+              <div class="def-item">
+                <span class="def-term">Fournisseurs de services</span>
+                <span class="def-desc"
+                  >Service client, infrastructure technique, sécurité, marketing
+                  des produits et événements Namyo.</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Partenaires publicitaires</span>
+                <span class="def-desc"
+                  >Proposer des publicités plus pertinentes sur le Service et
+                  mesurer leur efficacité.</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Artistes et maisons de disques</span>
+                <span class="def-desc"
+                  >Recevoir des actualités ou offres promotionnelles d'artistes
+                  ou labels, sur votre consentement (révocable à tout
+                  moment).</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Chercheurs universitaires</span>
+                <span class="def-desc"
+                  >Analyses statistiques et études académiques uniquement —
+                  données pseudonymisées.</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Autorités judiciaires</span>
+                <span class="def-desc"
+                  >My Sonar peut partager vos données pour se conformer à une
+                  obligation juridique ou répondre à une procédure judiciaire
+                  valide.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="doc-section" id="rgpd-conservation">
+            <p class="section-number">Section 6</p>
+            <h2>Conservation des données</h2>
+            <ul>
+              <li>
+                <strong>Données jusqu'à suppression par vous :</strong> vous
+                pouvez les supprimer directement depuis le Service.
+              </li>
+              <li>
+                <strong>Données avec expiration spécifique :</strong> ex. les
+                données de recherches sont supprimées après 90 jours.
+              </li>
+              <li>
+                <strong>Données jusqu'à la suppression du compte :</strong>
+                identifiant Namyo, informations de profil, historique de
+                streaming — supprimées ou anonymisées à la clôture du compte.
+              </li>
+              <li>
+                <strong
+                  >Données conservées longtemps à des fins limitées :</strong
+                >
+                après suppression du compte, certaines données peuvent être
+                conservées pour obligations légales, sécurité ou résolution de
+                litiges.
+              </li>
+              <li>
+                <strong>Données de vérification d'âge :</strong> immédiatement
+                supprimées une fois la vérification terminée.
+              </li>
+            </ul>
+          </div>
+
+          <div class="doc-section" id="rgpd-transferts">
+            <p class="section-number">Section 7</p>
+            <h2>Transferts vers d'autres pays</h2>
+            <p>
+              Vos données peuvent être traitées dans des pays dont les lois sur
+              la protection des données diffèrent de celles de l'UE/EEE. Les
+              transferts reposent sur :
+            </p>
+            <ul>
+              <li>
+                <strong>Décisions d'adéquation</strong> de la Commission
+                européenne pour les pays couverts ;
+              </li>
+              <li>
+                <strong>Clauses Contractuelles Types (CCT)</strong> pour les
+                autres pays hors UE/EEE, garantissant une protection
+                équivalente.
+              </li>
+            </ul>
+            <p>
+              My Sonar applique des protections supplémentaires : chiffrement,
+              pseudonymisation, évaluations des transferts, et politiques
+              permettant de contester les demandes disproportionnées d'autorités
+              gouvernementales.
+            </p>
+          </div>
+
+          <div class="doc-section" id="rgpd-securite">
+            <p class="section-number">Section 8</p>
+            <h2>Protection de vos données personnelles</h2>
+            <p>
+              My Sonar met en œuvre des mesures techniques et organisationnelles
+              appropriées (pseudonymisation, chiffrement, politiques d'accès et
+              de conservation). Aucun système n'est toutefois totalement
+              sécurisé.
+            </p>
+            <p>Pour protéger votre compte, nous vous recommandons de :</p>
+            <ul>
+              <li>
+                Définir un mot de passe fort utilisé uniquement pour votre
+                compte Namyo ;
+              </li>
+              <li>Ne jamais partager votre mot de passe avec quiconque ;</li>
+              <li>
+                Vous déconnecter après chaque utilisation sur un appareil
+                partagé.
+              </li>
+            </ul>
+          </div>
+
+          <div class="doc-section" id="rgpd-enfants">
+            <p class="section-number">Section 9</p>
+            <h2>Enfants</h2>
+            <p>
+              Le Service Namyo est soumis à une limite d'âge minimale dans
+              chaque pays. Si vous êtes en dessous de cette limite d'âge, ne
+              créez pas de compte et n'utilisez pas le Service Namyo standard.
+              Les mineurs au-dessus de la limite d'âge mais n'ayant pas atteint
+              la majorité ne peuvent utiliser le Service qu'avec le consentement
+              d'un parent ou tuteur légal.
+            </p>
+            <div class="callout-warn">
+              <p>
+                My Sonar ne collecte ni n'utilise sciemment les données
+                personnelles d'enfants en dessous de la limite d'âge applicable.
+                Si vous êtes parent et constatez que votre enfant a fourni des
+                données à My Sonar, contactez-nous immédiatement.
+              </p>
+            </div>
+          </div>
+
+          <div class="doc-section" id="rgpd-modif">
+            <p class="section-number">Section 10</p>
+            <h2>Modifications apportées à cette politique</h2>
+            <p>
+              My Sonar peut de temps à autre apporter des modifications à cette
+              Politique. Lors de modifications importantes, nous vous en
+              informons clairement : notification visible dans le Service Namyo,
+              e-mail ou notification sur votre appareil.
+            </p>
+          </div>
+
+          <div class="doc-section" id="rgpd-contact">
+            <p class="section-number">Section 11</p>
+            <h2>Comment nous contacter</h2>
+            <p>
+              Pour toute question concernant cette Politique, contactez notre
+              délégué à la protection des données :
+            </p>
+            <div class="def-list">
+              <div class="def-item">
+                <span class="def-term">Société</span>
+                <span class="def-desc"
+                  >My Sonar SAS — Délégué à la Protection des Données</span
+                >
+              </div>
+              <div class="def-item">
+                <span class="def-term">Adresse</span>
+                <span class="def-desc">61 rue de Lyon, 75012 Paris</span>
+              </div>
+              <div class="def-item">
+                <span class="def-term">E-mail</span>
+                <span class="def-desc"
+                  ><a href="mailto:contact@my-sonar.com"
+                    >contact@my-sonar.com</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════ TAB 3 : PI ═══════════════════════════════ -->
+    <div id="tab-pi" class="tab-panel">
+      <div class="layout">
+        <aside class="sidebar">
+          <p class="sidebar-title">Sommaire</p>
+          <nav>
+            <a href="#pi-about">1. À propos</a>
+            <a href="#pi-droits-auteur">2. Droits d'auteur</a>
+            <a href="#pi-marques">3. Marques de commerce</a>
+            <a href="#pi-traitement">4. Traitement des réclamations</a>
+          </nav>
+        </aside>
+
+        <article>
+          <div class="doc-section" id="pi-about">
+            <p class="section-number">Section 1</p>
+            <h2>À propos de la politique de propriété intellectuelle</h2>
+            <p>
+              La présente Politique décrit la manière dont My Sonar traite les
+              réclamations pour violation de la propriété intellectuelle sur ses
+              sites web, applications et services. My Sonar respecte les droits
+              de propriété intellectuelle et attend de ses utilisateurs qu'ils
+              en fassent de même.
+            </p>
+          </div>
+
+          <div class="doc-section" id="pi-droits-auteur">
+            <p class="section-number">Section 2</p>
+            <h2>Droits d'auteur</h2>
+            <p>
+              Les droits d'auteur protègent les œuvres originales (musique, art,
+              livres). Le titulaire a le droit exclusif de copier, distribuer et
+              afficher l'œuvre. Les droits d'auteur ne protègent pas les faits,
+              idées, noms, titres ou slogans. Des exceptions existent dans
+              certains pays (critique, révision, parodie).
+            </p>
+
+            <h3>Comment signaler une violation</h3>
+            <p>
+              Si vous êtes titulaire de droits d'auteur (ou leur mandataire) et
+              pensez qu'un contenu disponible via le Service Namyo enfreint
+              votre œuvre, soumettez un avis via le formulaire web ou contactez
+              :
+            </p>
+            <div class="callout">
+              <p>
+                <strong>MY SONAR — Objet : Violation des Droits d'auteur</strong
+                ><br />
+                61 rue de Lyon, 75012 Paris ·
+                <a href="mailto:contact@my-sonar.com">contact@my-sonar.com</a>
+              </p>
+            </div>
+            <p>Votre réclamation doit contenir :</p>
+            <ul>
+              <li>
+                L'identification précise de chaque œuvre dont la contrefaçon est
+                alléguée ;
+              </li>
+              <li>
+                Une description de l'emplacement du contenu litigieux sur le
+                Service Namyo (URL si possible) ;
+              </li>
+              <li>
+                Vos coordonnées complètes (nom, adresse, téléphone, email) ;
+              </li>
+              <li>
+                Une attestation de bonne foi quant à l'absence d'autorisation de
+                l'utilisation ;
+              </li>
+              <li>
+                Une attestation d'exactitude des informations et de votre
+                qualité de titulaire ou mandataire ;
+              </li>
+              <li>
+                Une signature manuscrite ou électronique du titulaire ou de son
+                représentant autorisé ;
+              </li>
+              <li>
+                Une déclaration de compréhension que vos coordonnées et avis
+                seront transmis à la partie présumée en faute.
+              </li>
+            </ul>
+            <div class="callout-warn">
+              <p>
+                Les rapports frauduleux ou abusifs peuvent entraîner la
+                résiliation de compte et/ou des poursuites. My Sonar applique
+                une politique de résiliation des comptes des contrevenants
+                répétés.
+              </p>
+            </div>
+          </div>
+
+          <div class="doc-section" id="pi-marques">
+            <p class="section-number">Section 3</p>
+            <h2>Marques de commerce</h2>
+            <p>
+              Une marque de commerce (mot, slogan, symbole ou dessin) distingue
+              les produits ou services d'une entité des autres. Elle vise à
+              prévenir la confusion des consommateurs quant à l'origine d'un
+              produit ou service.
+            </p>
+            <p>
+              Si vous êtes titulaire d'une marque (ou son mandataire) et pensez
+              qu'un contenu sur le Service Namyo l'enfreint, soumettez un avis
+              via le formulaire web dédié. My Sonar peut transmettre vos
+              coordonnées à la partie présumée en faute.
+            </p>
+          </div>
+
+          <div class="doc-section" id="pi-traitement">
+            <p class="section-number">Section 4</p>
+            <h2>Traitement des réclamations</h2>
+            <p>
+              My Sonar examine les réclamations reçues, évalue et prend les
+              mesures appropriées (suppression de contenu, désactivation dans
+              certains pays). My Sonar peut communiquer avec le demandeur et
+              l'utilisateur concerné. Tout contenu enfreignant des droits peut
+              être supprimé, et les contrevenants répétés peuvent voir leur
+              compte résilié.
+            </p>
+            <p>
+              Si vous estimez que votre contenu a été traité par erreur, vous
+              disposez d'une procédure de recours détaillée dans la
+              correspondance électronique de My Sonar. My Sonar exploite
+              également une combinaison de signaux automatisés et manuels pour
+              détecter les violations.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <p class="footer-brand">NAMYO</p>
+          <div class="footer-links">
+            <a
+              href="#"
+              onclick="
+                switchTab('cgu', document.querySelectorAll('.tab-btn')[0]);
+                return false;
+              "
+              >CGU / CGV</a
+            >
+            <a
+              href="#"
+              onclick="
+                switchTab('rgpd', document.querySelectorAll('.tab-btn')[1]);
+                return false;
+              "
+              >Politique de confidentialité</a
+            >
+            <a
+              href="#"
+              onclick="
+                switchTab('pi', document.querySelectorAll('.tab-btn')[2]);
+                return false;
+              "
+              >Propriété intellectuelle</a
+            >
+          </div>
+        </div>
+        <div class="footer-meta">
+          <p>© 2026 My Sonar SAS — Tous droits réservés</p>
+          <p>Capital social 1 000 € — RCS Paris 942 108 721</p>
+          <p>61 rue de Lyon, 75012 Paris</p>
+        </div>
+      </div>
+    </footer>
 
     <script>
       function switchTab(name, btn) {
